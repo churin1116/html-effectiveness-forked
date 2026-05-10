@@ -98,8 +98,8 @@
     font-family: var(--mono);
     font-size: 11px;
     color: var(--clay-d);
-    background: #F5E6DE;
-    border: 1.5px solid #E8C9BA;
+    background: color-mix(in srgb, var(--primary) 14%, var(--canvas));
+    border: 1.5px solid color-mix(in srgb, var(--primary) 32%, var(--canvas));
     border-radius: 999px;
     padding: 4px 10px;
     cursor: pointer;
@@ -155,7 +155,7 @@
   .col.dragover {
     outline: 2px dashed var(--clay);
     outline-offset: -6px;
-    background: #FBF6F2;
+    background: color-mix(in srgb, var(--primary) 6%, var(--canvas));
   }
   .col-head {
     position: sticky;
@@ -243,8 +243,8 @@
     cursor: pointer;
   }
   .tag:hover { filter: brightness(0.96); }
-  .tag-bug   { background: #F5E2D8; color: var(--clay-d); border-color: #E8C9BA; }
-  .tag-feat  { background: #E8EDE0; color: #5C6F44; border-color: #CFDAC0; }
+  .tag-bug   { background: color-mix(in srgb, var(--primary) 16%, var(--canvas)); color: var(--clay-d); border-color: color-mix(in srgb, var(--primary) 32%, var(--canvas)); }
+  .tag-feat  { background: color-mix(in srgb, var(--secondary) 16%, var(--canvas)); color: color-mix(in srgb, var(--secondary) 70%, var(--text)); border-color: color-mix(in srgb, var(--secondary) 35%, var(--canvas)); }
   .tag-chore { background: var(--gray-50); color: var(--gray-800); border-color: var(--gray-200); }
   .tag-debt  { background: var(--gray-50); color: var(--gray-800); border-color: var(--gray-200); }
   .est {
@@ -284,8 +284,8 @@
     justify-content: center;
     letter-spacing: 0.02em;
   }
-  .owner.o2 { background: #DCE4D2; }
-  .owner.o3 { background: #ECD9CE; }
+  .owner.o2 { background: color-mix(in srgb, var(--secondary) 18%, var(--canvas)); }
+  .owner.o3 { background: color-mix(in srgb, var(--primary) 18%, var(--canvas)); }
   .owner.o4 { background: var(--gray-50); }
 
   @media (max-width: 920px) {

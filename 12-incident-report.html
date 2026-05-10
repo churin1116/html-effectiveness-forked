@@ -237,8 +237,8 @@
   }
   .diff-line { white-space: pre; }
   .diff-line.ctx { color: var(--gray-300); }
-  .diff-line.del { color: #E0897A; }
-  .diff-line.add { color: #A3B88A; }
+  .diff-line.del { color: color-mix(in srgb, var(--primary) 75%, var(--canvas)); }
+  .diff-line.add { color: color-mix(in srgb, var(--secondary) 65%, var(--canvas)); }
 
   /* ---------- Impact table ---------- */
   table.impact {

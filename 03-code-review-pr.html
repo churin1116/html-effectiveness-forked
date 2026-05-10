@@ -181,7 +181,7 @@
   .chip.safe { background: rgba(120,140,93,0.10); border-color: rgba(120,140,93,0.45); }
   .chip.safe .dot { background: var(--olive); }
   .chip.medium { background: var(--oat); }
-  .chip.medium .dot { background: #B89B6E; }
+  .chip.medium .dot { background: color-mix(in srgb, var(--accent) 50%, var(--text-muted)); }
   .chip.attention { background: rgba(217,119,87,0.12); border-color: rgba(217,119,87,0.55); }
   .chip.attention .dot { background: var(--clay); }
 
@@ -235,7 +235,7 @@
     font-weight: 600;
   }
   .risk-tag.safe { background: rgba(120,140,93,0.15); color: var(--olive); }
-  .risk-tag.medium { background: var(--oat); color: #7A6A4F; }
+  .risk-tag.medium { background: var(--oat); color: color-mix(in srgb, var(--accent) 30%, var(--text-muted)); }
   .risk-tag.attention { background: rgba(217,119,87,0.15); color: var(--clay); }
 
   /* ---------- Diff block ---------- */
@@ -263,8 +263,8 @@
     text-align: center;
     color: var(--gray-500);
   }
-  .diff-row .code { color: #E8E6DC; }
-  .diff-row.ctx .code { color: #B8B6AC; }
+  .diff-row .code { color: color-mix(in srgb, var(--accent) 50%, var(--canvas)); }
+  .diff-row.ctx .code { color: color-mix(in srgb, var(--accent) 50%, var(--text-subtle)); }
   .diff-row.add { background: rgba(120,140,93,0.15); }
   .diff-row.add .mark { color: var(--olive); }
   .diff-row.del { background: rgba(176,74,63,0.15); }
@@ -442,7 +442,7 @@
     </div>
     <div class="legend">
       <span><span class="dot" style="background:var(--olive)"></span> safe</span>
-      <span><span class="dot" style="background:#B89B6E"></span> worth a look</span>
+      <span><span class="dot" style="background:color-mix(in srgb, var(--accent) 50%, var(--text-muted))"></span> worth a look</span>
       <span><span class="dot" style="background:var(--clay)"></span> needs attention</span>
     </div>
   </section>

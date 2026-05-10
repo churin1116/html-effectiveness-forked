@@ -166,7 +166,7 @@
 
   pre.code {
     background: var(--slate);
-    color: #E8E6DC;
+    color: color-mix(in srgb, var(--accent) 50%, var(--canvas));
     font-family: var(--mono);
     font-size: 12.5px;
     line-height: 1.7;
@@ -176,8 +176,8 @@
     margin-top: 10px;
   }
   pre.code .dim { color: var(--gray-500); }
-  pre.code .kw  { color: #C9B98A; }
-  pre.code .str { color: #A8BC8C; }
+  pre.code .kw  { color: color-mix(in srgb, var(--accent) 60%, var(--secondary)); }
+  pre.code .str { color: color-mix(in srgb, var(--secondary) 65%, var(--canvas)); }
 
   /* ---------- Sidebar ---------- */
   aside {

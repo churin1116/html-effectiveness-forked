@@ -276,13 +276,13 @@
     transition: background 0.12s ease, border-color 0.12s ease;
   }
   .btn-primary   { background: var(--clay); color: var(--white); }
-  .btn-primary:hover { background: #C7684C; }
+  .btn-primary:hover { background: color-mix(in srgb, var(--primary) 78%, var(--text)); }
   .btn-secondary { background: var(--white); color: var(--slate); border-color: var(--gray-300); }
   .btn-secondary:hover { background: var(--gray-100); }
   .btn-ghost     { background: transparent; color: var(--gray-700); }
   .btn-ghost:hover { background: var(--gray-100); }
   .btn-danger    { background: var(--danger); color: var(--white); }
-  .btn-danger:hover { background: #9A3F3F; }
+  .btn-danger:hover { background: color-mix(in srgb, var(--danger) 80%, var(--text)); }
 
   /* Input */
   .input {
@@ -352,7 +352,7 @@
   .badge-neutral { background: var(--gray-100); color: var(--gray-700); }
   .badge-accent  { background: rgba(217, 119, 87, 0.14); color: var(--clay); }
   .badge-success { background: rgba(120, 140, 93, 0.16); color: var(--olive); }
-  .badge-warning { background: rgba(199, 142, 63, 0.16); color: #A06A2A; }
+  .badge-warning { background: rgba(199, 142, 63, 0.16); color: color-mix(in srgb, var(--warning) 75%, var(--text)); }
 </style>
 </head>
 <body>
@@ -436,8 +436,8 @@
           <span class="token">--success</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#C78E3F"></div>
-          <span class="hex">#C78E3F</span>
+          <div class="chip no-border" style="background:var(--warning)"></div>
+          <span class="hex">var(--warning)</span>
           <span class="token">--warning</span>
         </div>
         <div class="swatch">
@@ -446,8 +446,8 @@
           <span class="token">--danger</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#5C7CA3"></div>
-          <span class="hex">#5C7CA3</span>
+          <div class="chip no-border" style="background:var(--info)"></div>
+          <span class="hex">var(--info)</span>
           <span class="token">--info</span>
         </div>
       </div>

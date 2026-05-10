@@ -79,8 +79,8 @@
     align-items: baseline;
     gap: 8px;
     padding: 10px 14px;
-    border: 1.5px solid #E8C2AE;
-    background: #F8E9E0;
+    border: 1.5px solid color-mix(in srgb, var(--primary) 38%, var(--canvas));
+    background: color-mix(in srgb, var(--primary) 12%, var(--canvas));
     color: var(--clay-d);
     border-radius: 10px;
     font-size: 13px;
@@ -124,7 +124,7 @@
   .flag:last-child { border-bottom: none; }
   .flag.warn {
     border-left-color: var(--clay);
-    background: #FBF3EE;
+    background: color-mix(in srgb, var(--primary) 8%, var(--canvas));
   }
 
   .flag-info { flex: 1; min-width: 0; }
@@ -177,8 +177,8 @@
   .req-chip .warn-glyph { display: none; }
   .flag.warn .req-chip {
     color: var(--clay-d);
-    background: #F8E1D5;
-    border-color: #E8C2AE;
+    background: color-mix(in srgb, var(--primary) 16%, var(--canvas));
+    border-color: color-mix(in srgb, var(--primary) 38%, var(--canvas));
   }
   .flag.warn .req-chip .warn-glyph { display: inline; }
 
