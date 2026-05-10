@@ -9,20 +9,20 @@
   <script src="https://churin1116.github.io/html-chameleon/theme/v1/theme.js"></script>
   <style>
     :root {
-      --ivory:    #FAF9F5;
-      --slate:    #141413;
-      --clay:     #D97757;
-      --oat:      #E3DACC;
-      --olive:    #788C5D;
-      --gray-150: #F0EEE6;
-      --gray-300: #D1CFC5;
-      --gray-500: #87867F;
-      --gray-700: #3D3D3A;
-      --white:    #FFFFFF;
+      --ivory:    var(--canvas);
+      --slate:    var(--text);
+      --clay:     var(--primary);
+      --oat:      var(--accent);
+      --olive:    var(--secondary);
+      --gray-150: var(--surface-2);
+      --gray-300: var(--border);
+      --gray-500: var(--text-subtle);
+      --gray-700: var(--text-muted);
+      --white:    var(--surface);
 
-      --serif: ui-serif, Georgia, 'Times New Roman', serif;
-      --sans:  system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      --mono:  ui-monospace, 'SF Mono', Menlo, Monaco, monospace;
+      --serif: var(--font-serif);
+      --sans:  var(--font-sans);
+      --mono:  var(--font-mono);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -468,66 +468,66 @@
         <svg viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,0 L10,5 L0,10 z" fill="#87867F"/>
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--text-subtle)"/>
             </marker>
             <marker id="arrowClay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--primary)"/>
             </marker>
           </defs>
 
           <!-- boxes -->
-          <g font-size="12" fill="#141413">
-            <rect x="20"  y="20"  width="180" height="54" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+          <g font-size="12" fill="var(--text)">
+            <rect x="20"  y="20"  width="180" height="54" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
             <text x="110" y="43" text-anchor="middle" font-weight="600">&lt;CommentComposer&gt;</text>
-            <text x="110" y="60" text-anchor="middle" fill="#87867F" font-size="10.5">apps/web</text>
+            <text x="110" y="60" text-anchor="middle" fill="var(--text-subtle)" font-size="10.5">apps/web</text>
 
-            <rect x="20"  y="150" width="180" height="54" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+            <rect x="20"  y="150" width="180" height="54" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
             <text x="110" y="173" text-anchor="middle" font-weight="600">React Query cache</text>
-            <text x="110" y="190" text-anchor="middle" fill="#87867F" font-size="10.5">optimistic insert</text>
+            <text x="110" y="190" text-anchor="middle" fill="var(--text-subtle)" font-size="10.5">optimistic insert</text>
 
-            <rect x="340" y="150" width="180" height="54" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+            <rect x="340" y="150" width="180" height="54" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
             <text x="430" y="173" text-anchor="middle" font-weight="600">comments.create</text>
-            <text x="430" y="190" text-anchor="middle" fill="#87867F" font-size="10.5">tRPC · packages/api</text>
+            <text x="430" y="190" text-anchor="middle" fill="var(--text-subtle)" font-size="10.5">tRPC · packages/api</text>
 
-            <rect x="340" y="266" width="180" height="54" rx="10" fill="#141413" stroke="#141413"/>
-            <text x="430" y="289" text-anchor="middle" font-weight="600" fill="#FAF9F5">comments table</text>
+            <rect x="340" y="266" width="180" height="54" rx="10" fill="var(--text)" stroke="var(--text)"/>
+            <text x="430" y="289" text-anchor="middle" font-weight="600" fill="var(--canvas)">comments table</text>
             <text x="430" y="306" text-anchor="middle" fill="#C9B98A" font-size="10.5">postgres · packages/db</text>
 
-            <rect x="660" y="150" width="180" height="54" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+            <rect x="660" y="150" width="180" height="54" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
             <text x="750" y="173" text-anchor="middle" font-weight="600">realtime channel</text>
-            <text x="750" y="190" text-anchor="middle" fill="#87867F" font-size="10.5">task:{id}:comments</text>
+            <text x="750" y="190" text-anchor="middle" fill="var(--text-subtle)" font-size="10.5">task:{id}:comments</text>
 
-            <rect x="660" y="20"  width="180" height="54" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+            <rect x="660" y="20"  width="180" height="54" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
             <text x="750" y="43" text-anchor="middle" font-weight="600">Other viewers</text>
-            <text x="750" y="60" text-anchor="middle" fill="#87867F" font-size="10.5">subscribed cards</text>
+            <text x="750" y="60" text-anchor="middle" fill="var(--text-subtle)" font-size="10.5">subscribed cards</text>
 
-            <rect x="660" y="266" width="180" height="54" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+            <rect x="660" y="266" width="180" height="54" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
             <text x="750" y="289" text-anchor="middle" font-weight="600">notify worker</text>
-            <text x="750" y="306" text-anchor="middle" fill="#87867F" font-size="10.5">@mentions → queue</text>
+            <text x="750" y="306" text-anchor="middle" fill="var(--text-subtle)" font-size="10.5">@mentions → queue</text>
           </g>
 
           <!-- arrows -->
-          <g stroke="#87867F" stroke-width="1.5" fill="none">
+          <g stroke="var(--text-subtle)" stroke-width="1.5" fill="none">
             <path d="M110 74 L110 150" marker-end="url(#arrow)"/>
             <path d="M200 177 L340 177" marker-end="url(#arrow)"/>
             <path d="M430 204 L430 266" marker-end="url(#arrow)"/>
             <path d="M520 293 L660 293" marker-end="url(#arrow)"/>
           </g>
-          <g stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
+          <g stroke="var(--primary)" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
             <path d="M520 177 L660 177" marker-end="url(#arrowClay)"/>
             <path d="M750 150 L750 74" marker-end="url(#arrowClay)"/>
             <path d="M660 162 C 540 120, 280 120, 205 162" marker-end="url(#arrowClay)"/>
           </g>
 
           <!-- edge labels -->
-          <g font-size="10.5" fill="#87867F">
+          <g font-size="10.5" fill="var(--text-subtle)">
             <text x="118" y="118">submit (id=temp)</text>
             <text x="240" y="170">mutate</text>
             <text x="438" y="240">INSERT + read cursor</text>
             <text x="548" y="286">enqueue</text>
-            <text x="548" y="172" fill="#D97757">broadcast row</text>
-            <text x="758" y="118" fill="#D97757">live append</text>
-            <text x="360" y="112" fill="#D97757">reconcile temp id → real id</text>
+            <text x="548" y="172" fill="var(--primary)">broadcast row</text>
+            <text x="758" y="118" fill="var(--primary)">live append</text>
+            <text x="360" y="112" fill="var(--primary)">reconcile temp id → real id</text>
           </g>
         </svg>
         <p class="caption">Solid = request/response path. Dashed clay = realtime fan-out. The composer never waits on the dashed path.</p>

@@ -9,25 +9,25 @@
 <script src="https://churin1116.github.io/html-chameleon/theme/v1/theme.js"></script>
 <style>
   :root {
-    --ivory: #FAF9F5;
-    --slate: #141413;
-    --clay: #D97757;
-    --oat: #E3DACC;
-    --olive: #788C5D;
-    --gray-100: #F0EEE6;
-    --gray-300: #D1CFC5;
-    --gray-500: #87867F;
-    --gray-700: #3D3D3A;
-    --white: #FFFFFF;
+    --ivory: var(--canvas);
+    --slate: var(--text);
+    --clay: var(--primary);
+    --oat: var(--accent);
+    --olive: var(--secondary);
+    --gray-100: var(--surface-2);
+    --gray-300: var(--border);
+    --gray-500: var(--text-subtle);
+    --gray-700: var(--text-muted);
+    --white: var(--surface);
 
-    --serif: ui-serif, Georgia, serif;
-    --sans: system-ui, -apple-system, sans-serif;
-    --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+    --serif: var(--font-serif);
+    --sans: var(--font-sans);
+    --mono: var(--font-mono);
 
     /* live-controlled tokens */
     --card-pad: 20px;
     --card-border: 1.5px solid var(--gray-300);
-    --card-shadow: 0 4px 14px rgba(20, 20, 19, 0.08);
+    --card-shadow: 0 4px 14px color-mix(in srgb, var(--text) 8%, transparent);
   }
 
   * { box-sizing: border-box; }
@@ -318,7 +318,7 @@
     box-shadow: none;
   }
   .v-inset .chip { background: rgba(255,255,255,0.6); }
-  .v-inset .ghost-btn { border-color: rgba(20,20,19,0.15); }
+  .v-inset .ghost-btn { border-color: color-mix(in srgb, var(--text) 15%, transparent); }
   .v-inset .avatar { background: var(--white); }
 
   .v-horizontal {
@@ -583,7 +583,7 @@
     }
     function applyShadow() {
       root.style.setProperty('--card-shadow',
-        shadow.checked ? '0 4px 14px rgba(20,20,19,0.08)' : 'none');
+        shadow.checked ? '0 4px 14px color-mix(in srgb, var(--text) 8%, transparent)' : 'none');
     }
 
     pad.addEventListener('input', applyPad);

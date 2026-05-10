@@ -9,20 +9,20 @@
 <script src="https://churin1116.github.io/html-chameleon/theme/v1/theme.js"></script>
 <style>
   :root {
-    --ivory: #FAF9F5;
-    --slate: #141413;
-    --clay: #D97757;
-    --clay-d: #B85C3E;
-    --oat: #E3DACC;
-    --olive: #788C5D;
-    --gray-50: #F0EEE6;
-    --gray-200: #D1CFC5;
-    --gray-500: #87867F;
-    --gray-800: #3D3D3A;
-    --white: #ffffff;
-    --serif: ui-serif, Georgia, "Times New Roman", serif;
-    --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
-    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --ivory: var(--canvas);
+    --slate: var(--text);
+    --clay: var(--primary);
+    --clay-d: color-mix(in srgb, var(--primary) 78%, var(--text));
+    --oat: var(--accent);
+    --olive: var(--secondary);
+    --gray-50: var(--surface-2);
+    --gray-200: color-mix(in srgb, var(--border) 60%, var(--surface-2));
+    --gray-500: var(--text-subtle);
+    --gray-800: var(--text-muted);
+    --white: var(--surface);
+    --serif: var(--font-serif);
+    --sans: var(--font-sans);
+    --mono: var(--font-mono);
   }
   * { box-sizing: border-box; }
   html, body {

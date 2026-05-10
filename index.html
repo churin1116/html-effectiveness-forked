@@ -9,21 +9,23 @@
 <script src="https://churin1116.github.io/html-chameleon/theme/v1/theme.js"></script>
 <style>
   :root {
-    --ivory:  #FAF9F5;
-    --paper:  #FFFFFF;
-    --slate:  #141413;
-    --clay:   #D97757;
-    --clay-d: #B85C3E;
-    --oat:    #E3DACC;
-    --olive:  #788C5D;
-    --g100:   #F0EEE6;
-    --g200:   #E6E3DA;
-    --g300:   #D1CFC5;
-    --g500:   #87867F;
-    --g700:   #3D3D3A;
-    --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
-    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+    /* Color tokens aliased to Chameleon roles — all colors flow through the active theme. */
+    --ivory:  var(--canvas);
+    --paper:  var(--surface);
+    --slate:  var(--text);
+    --clay:   var(--primary);
+    --clay-d: color-mix(in srgb, var(--primary) 78%, var(--text));
+    --oat:    var(--accent);
+    --olive:  var(--secondary);
+    --g100:   var(--surface-2);
+    --g200:   color-mix(in srgb, var(--border) 60%, var(--surface-2));
+    --g300:   var(--border);
+    --g500:   var(--text-subtle);
+    --g700:   var(--text-muted);
+    /* Font tokens aliased to Chameleon's style axis. */
+    --serif:  var(--font-serif);
+    --sans:   var(--font-sans);
+    --mono:   var(--font-mono);
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -118,7 +120,7 @@
   .hero-fig .pane.html {
     transform: rotate(1.5deg);
     border-color: var(--slate);
-    box-shadow: 0 12px 32px rgba(20,20,19,.10);
+    box-shadow: 0 12px 32px color-mix(in srgb, var(--text) 10%, transparent);
   }
   .hero-fig .tag {
     position: absolute;
@@ -142,7 +144,7 @@
   .hero-fig .pane.html .blk {
     border-radius: 5px;
     flex: 1;
-    background: linear-gradient(135deg, var(--oat), #ECE1CF);
+    background: linear-gradient(135deg, var(--oat), color-mix(in srgb, var(--oat) 75%, var(--text-muted)));
     position: relative;
     overflow: hidden;
   }
@@ -259,7 +261,7 @@
   }
   a.card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(20, 20, 19, 0.10);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--text) 10%, transparent);
     border-color: var(--slate);
   }
 

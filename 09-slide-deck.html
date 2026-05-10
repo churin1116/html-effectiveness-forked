@@ -12,19 +12,19 @@
      Design tokens
      ------------------------------------------------------------------ */
   :root {
-    --ivory:   #FAF9F5;
-    --slate:   #141413;
-    --clay:    #D97757;
-    --oat:     #E3DACC;
-    --olive:   #788C5D;
-    --gray-150:#F0EEE6;
-    --gray-300:#D1CFC5;
-    --gray-500:#87867F;
-    --gray-700:#3D3D3A;
+    --ivory:   var(--canvas);
+    --slate:   var(--text);
+    --clay:    var(--primary);
+    --oat:     var(--accent);
+    --olive:   var(--secondary);
+    --gray-150:var(--surface-2);
+    --gray-300:var(--border);
+    --gray-500:var(--text-subtle);
+    --gray-700:var(--text-muted);
 
-    --serif: ui-serif, Georgia, "Times New Roman", serif;
-    --sans:  system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --serif: var(--font-serif);
+    --sans:  var(--font-sans);
+    --mono:  var(--font-mono);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -377,9 +377,9 @@
   <section class="slide title-slide" id="s1">
     <div class="slide-inner">
       <svg class="ornament" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
-        <circle cx="28" cy="28" r="22" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
-        <path d="M16 28 H40 M28 16 V40" stroke="#D97757" stroke-width="1.5" stroke-linecap="round"/>
-        <circle cx="28" cy="28" r="3" fill="#141413"/>
+        <circle cx="28" cy="28" r="22" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+        <path d="M16 28 H40 M28 16 V40" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="28" cy="28" r="3" fill="var(--text)"/>
       </svg>
       <h1>Platform Eng<br>— Week of Mar 10</h1>
       <p class="subtitle">
@@ -499,12 +499,12 @@
           <polyline
             points="0,22 110,30 220,18 330,34 440,26 550,40 660,24 780,12"
             fill="none"
-            stroke="#788C5D"
+            stroke="var(--secondary)"
             stroke-width="2"
             stroke-linejoin="round"
             stroke-linecap="round"/>
-          <circle cx="780" cy="12" r="3.5" fill="#788C5D"/>
-          <line x1="0" y1="63" x2="780" y2="63" stroke="#D1CFC5" stroke-width="1"/>
+          <circle cx="780" cy="12" r="3.5" fill="var(--secondary)"/>
+          <line x1="0" y1="63" x2="780" y2="63" stroke="var(--border)" stroke-width="1"/>
         </svg>
         <div class="sparkline-caption">
           p95 latency, trailing 8 days — lower is better

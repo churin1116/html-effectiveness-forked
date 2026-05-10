@@ -9,20 +9,20 @@
 <script src="https://churin1116.github.io/html-chameleon/theme/v1/theme.js"></script>
 <style>
   :root {
-    --ivory: #FAF9F5;
-    --slate: #141413;
-    --clay: #D97757;
-    --oat: #E3DACC;
-    --olive: #788C5D;
-    --gray-100: #F0EEE6;
-    --gray-300: #D1CFC5;
-    --gray-500: #87867F;
-    --gray-700: #3D3D3A;
-    --white: #FFFFFF;
+    --ivory: var(--canvas);
+    --slate: var(--text);
+    --clay: var(--primary);
+    --oat: var(--accent);
+    --olive: var(--secondary);
+    --gray-100: var(--surface-2);
+    --gray-300: var(--border);
+    --gray-500: var(--text-subtle);
+    --gray-700: var(--text-muted);
+    --white: var(--surface);
 
-    --serif: ui-serif, Georgia, serif;
-    --sans: system-ui, -apple-system, sans-serif;
-    --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+    --serif: var(--font-serif);
+    --sans: var(--font-sans);
+    --mono: var(--font-mono);
 
     --radius-panel: 12px;
     --radius-row: 8px;
@@ -281,7 +281,7 @@
   .btn-secondary:hover { background: var(--gray-100); }
   .btn-ghost     { background: transparent; color: var(--gray-700); }
   .btn-ghost:hover { background: var(--gray-100); }
-  .btn-danger    { background: #B04A4A; color: var(--white); }
+  .btn-danger    { background: var(--danger); color: var(--white); }
   .btn-danger:hover { background: #9A3F3F; }
 
   /* Input */
@@ -374,23 +374,23 @@
       <div class="swatch-group-label">Primary</div>
       <div class="swatch-grid">
         <div class="swatch">
-          <div class="chip no-border" style="background:#D97757"></div>
-          <span class="hex">#D97757</span>
+          <div class="chip no-border" style="background:var(--primary)"></div>
+          <span class="hex">var(--primary)</span>
           <span class="token">--clay</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#141413"></div>
-          <span class="hex">#141413</span>
+          <div class="chip no-border" style="background:var(--text)"></div>
+          <span class="hex">var(--text)</span>
           <span class="token">--slate</span>
         </div>
         <div class="swatch">
-          <div class="chip" style="background:#FAF9F5"></div>
-          <span class="hex">#FAF9F5</span>
+          <div class="chip" style="background:var(--canvas)"></div>
+          <span class="hex">var(--canvas)</span>
           <span class="token">--ivory</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#E3DACC"></div>
-          <span class="hex">#E3DACC</span>
+          <div class="chip no-border" style="background:var(--accent)"></div>
+          <span class="hex">var(--accent)</span>
           <span class="token">--oat</span>
         </div>
       </div>
@@ -400,28 +400,28 @@
       <div class="swatch-group-label">Neutral</div>
       <div class="swatch-grid">
         <div class="swatch">
-          <div class="chip" style="background:#FFFFFF"></div>
-          <span class="hex">#FFFFFF</span>
+          <div class="chip" style="background:var(--surface)"></div>
+          <span class="hex">var(--surface)</span>
           <span class="token">--white</span>
         </div>
         <div class="swatch">
-          <div class="chip" style="background:#F0EEE6"></div>
-          <span class="hex">#F0EEE6</span>
+          <div class="chip" style="background:var(--surface-2)"></div>
+          <span class="hex">var(--surface-2)</span>
           <span class="token">--gray-100</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#D1CFC5"></div>
-          <span class="hex">#D1CFC5</span>
+          <div class="chip no-border" style="background:var(--border)"></div>
+          <span class="hex">var(--border)</span>
           <span class="token">--gray-300</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#87867F"></div>
-          <span class="hex">#87867F</span>
+          <div class="chip no-border" style="background:var(--text-subtle)"></div>
+          <span class="hex">var(--text-subtle)</span>
           <span class="token">--gray-500</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#3D3D3A"></div>
-          <span class="hex">#3D3D3A</span>
+          <div class="chip no-border" style="background:var(--text-muted)"></div>
+          <span class="hex">var(--text-muted)</span>
           <span class="token">--gray-700</span>
         </div>
       </div>
@@ -431,8 +431,8 @@
       <div class="swatch-group-label">Semantic</div>
       <div class="swatch-grid">
         <div class="swatch">
-          <div class="chip no-border" style="background:#788C5D"></div>
-          <span class="hex">#788C5D</span>
+          <div class="chip no-border" style="background:var(--secondary)"></div>
+          <span class="hex">var(--secondary)</span>
           <span class="token">--success</span>
         </div>
         <div class="swatch">
@@ -441,8 +441,8 @@
           <span class="token">--warning</span>
         </div>
         <div class="swatch">
-          <div class="chip no-border" style="background:#B04A4A"></div>
-          <span class="hex">#B04A4A</span>
+          <div class="chip no-border" style="background:var(--danger)"></div>
+          <span class="hex">var(--danger)</span>
           <span class="token">--danger</span>
         </div>
         <div class="swatch">
@@ -567,13 +567,13 @@
     </div>
 
     <div class="token-row">
-      <div class="shadow-card" style="box-shadow:0 1px 2px rgba(20,20,19,0.06)">
+      <div class="shadow-card" style="box-shadow:0 1px 2px color-mix(in srgb, var(--text) 6%, transparent)">
         <div class="lbl">--shadow-sm<span>0 1px 2px / 6%</span></div>
       </div>
-      <div class="shadow-card" style="box-shadow:0 4px 10px rgba(20,20,19,0.08)">
+      <div class="shadow-card" style="box-shadow:0 4px 10px color-mix(in srgb, var(--text) 8%, transparent)">
         <div class="lbl">--shadow-md<span>0 4px 10px / 8%</span></div>
       </div>
-      <div class="shadow-card" style="box-shadow:0 12px 28px rgba(20,20,19,0.12)">
+      <div class="shadow-card" style="box-shadow:0 12px 28px color-mix(in srgb, var(--text) 12%, transparent)">
         <div class="lbl">--shadow-lg<span>0 12px 28px / 12%</span></div>
       </div>
     </div>

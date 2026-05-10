@@ -9,18 +9,18 @@
 <script src="https://churin1116.github.io/html-chameleon/theme/v1/theme.js"></script>
 <style>
   :root {
-    --ivory:   #FAF9F5;
-    --slate:   #141413;
-    --clay:    #D97757;
-    --oat:     #E3DACC;
-    --olive:   #788C5D;
-    --gray-150:#F0EEE6;
-    --gray-300:#D1CFC5;
-    --gray-500:#87867F;
-    --gray-700:#3D3D3A;
-    --serif: ui-serif, Georgia, "Times New Roman", serif;
-    --sans:  system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --ivory:   var(--canvas);
+    --slate:   var(--text);
+    --clay:    var(--primary);
+    --oat:     var(--accent);
+    --olive:   var(--secondary);
+    --gray-150:var(--surface-2);
+    --gray-300:var(--border);
+    --gray-500:var(--text-subtle);
+    --gray-700:var(--text-muted);
+    --serif: var(--font-serif);
+    --sans:  var(--font-sans);
+    --mono:  var(--font-mono);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -100,7 +100,7 @@
     border: 1.5px solid var(--gray-300);
     border-left: 3px solid var(--clay);
     border-radius: 10px;
-    background: #fff;
+    background: var(--surface);
     padding: 16px 18px;
     margin-bottom: 8px;
   }
@@ -121,7 +121,7 @@
   details {
     border: 1.5px solid var(--gray-300);
     border-radius: 10px;
-    background: #fff;
+    background: var(--surface);
     margin: 14px 0;
     overflow: hidden;
   }
@@ -158,7 +158,7 @@
   .tabs {
     border: 1.5px solid var(--gray-300);
     border-radius: 10px;
-    background: #fff;
+    background: var(--surface);
     margin: 16px 0 8px;
     overflow: hidden;
   }
@@ -179,7 +179,7 @@
     border-right: 1px solid var(--gray-300);
   }
   .tabbar button.on {
-    background: #fff;
+    background: var(--surface);
     color: var(--slate);
     border-bottom: 2px solid var(--clay);
     margin-bottom: -1px;
